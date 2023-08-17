@@ -4,22 +4,36 @@
 <style>
     a {
         text-decoration: none;
+        color: black;
+    }
+    a:hover{
+        color: darkgray;
+    }
+
+    p {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
     }
 </style>
 <main>
     <div class="row row-cols-3 m-auto">
         {% for content in news %}
         <div class="col">
-            <div class="card" style="">
+            <div class="card  border-0 shadow">
                 <div class="card-body">
-                  <h5 class="card-title">{{content.title}}</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">{{content.post_date}}</h6>
-                  <hr>
-                  <p class="card-text">{{content.detail}}</p>
-                  <a href="#" class="card-link">ข่าว{{content.category}}</a>
-                  <a href="#" class="card-link">ผู้เขียน : {{content.post_by}}</a>
+                    <h5 class="card-title"><a href="">{{content.title}}</a></h5>
+                    <small class="card-subtitle mb-2 text-muted">{{content.post_date}}</small>
+                    <hr>
+                    <p class="card-text">{{content.detail}}</p>
+                    <hr>
+                    <div class="d-flex flex-row justify-content-between">
+                        <a href="#" class="card-link">ข่าว{{content.category}}</a>
+                        <a href="#" class="card-link">โดย {{content.post_by}}</a>
+                    </div>
                 </div>
-              </div>
+            </div>
         </div>
         {% endfor %}
 

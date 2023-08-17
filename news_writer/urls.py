@@ -20,7 +20,12 @@ from django.urls import path
 from news import views as page
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', page.inex, name='index'),
+    path('admin/', admin.site.urls, name='admin'),
+    path('', page.index, name='index'),
     path('feeds', page.feeds, name='feeds'),
 ]
+
+from django.conf import settings
+from django.conf.urls.static import static
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

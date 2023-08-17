@@ -118,7 +118,7 @@ celerybeat.pid
 
 # SageMath parsed files
 *.sage.py
-
+*.pyc
 # Environments
 .env
 .venv
@@ -134,7 +134,7 @@ venv.bak/
 
 # Rope project settings
 .ropeproject
-
+.sqlite3
 # mkdocs documentation
 /site
 
@@ -142,7 +142,7 @@ venv.bak/
 .mypy_cache/
 .dmypy.json
 dmypy.json
-
+*.bat
 # Pyre type checker
 .pyre/
 

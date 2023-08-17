@@ -6,23 +6,44 @@ from . import models
 
 @admin.register(models.Category)
 class CategoryAdmin(admin.ModelAdmin):
-    list_display = ('category',)
-    search_fields = list_display
+    list_display = [
+        'category'
+    ]
+    search_fields = [
+        'category'
+    ]
     
-@admin.register(models.News)
-class NewsAdmin(admin.ModelAdmin):
-    list_display = (
+@admin.register(models.Author)
+class AuthorAdmin(admin.ModelAdmin):
+    list_display = [
+        'user',
+    ]
+
+@admin.register(models.Content)
+class ContentAdmin(admin.ModelAdmin):
+    list_display = [
+        'author',
         'title',
-        'category',
-        'post_by',
-        'post_date',
-    )
+        
+    ]
 
+@admin.register(models.Comment)
+class CommentAdmin(admin.ModelAdmin):
+    list_display = [
+        'user',
+        'content',
+    ]
+    
+    search_fields = [
+        'user',
+        'content',
+    ]
 
-@admin.register(models.Writer)
-class WriterAdmin(admin.ModelAdmin):
-    list_display = (
-        'prfix',
-        'fname',
-        'lname',
-    )
+@admin.register(models.ReplyComment)
+class ReplyCommentAdmin(admin.ModelAdmin):
+    list_display = [
+        'user',
+        'comment',
+    ]
+    
+    search_fields = list_display
