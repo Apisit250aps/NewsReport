@@ -1,16 +1,16 @@
 # NewsReport
 - [NewsReport](#newsreport)
   - [What can to do?](#what-can-to-do)
-  - [Project Information](#project-information)
-- [Database](#database)
-  - [Install `psycopg` for connect to postgres SQL Server](#install-psycopg-for-connect-to-postgres-sql-server)
-  - [Setting Database connection to postgres SQL Server](#setting-database-connection-to-postgres-sql-server)
-  - [Dump and Load database to JSON file](#dump-and-load-database-to-json-file)
-    - [install Django Dump Load UTF-8 for windows](#install-django-dump-load-utf-8-for-windows)
-    - [Add to INSTALL\_APPS settings.py](#add-to-install_apps-settingspy)
-    - [Dumpdata to JSON command](#dumpdata-to-json-command)
-    - [Loaddata to new database command](#loaddata-to-new-database-command)
-  - [Entity Relations Diagram ( ERD )](#entity-relations-diagram--erd-)
+  - [Project Information.](#project-information)
+- [Database.](#database)
+  - [Install `psycopg` for connect to postgres SQL Server.](#install-psycopg-for-connect-to-postgres-sql-server)
+  - [Setting Database connection to postgres SQL Server.](#setting-database-connection-to-postgres-sql-server)
+  - [Dump and Load database to JSON file.](#dump-and-load-database-to-json-file)
+    - [install Django Dump Load UTF-8 for windows.](#install-django-dump-load-utf-8-for-windows)
+    - [Add to INSTALL\_APPS. settings.py](#add-to-install_apps-settingspy)
+    - [Dumpdata to JSON command.](#dumpdata-to-json-command)
+    - [Loaddata to new database command.](#loaddata-to-new-database-command)
+  - [Entity Relations Diagram ( ERD ).](#entity-relations-diagram--erd-)
 - [Webpage](#webpage)
   - [feeds](#feeds)
   - [read](#read)
@@ -20,20 +20,21 @@
   - [COPY manage.py](#copy-managepy)
 
 ## What can to do?
-- เป็นแอพสำหรับการอ่านบทความ หรือ ข่าว
-- ข่าวหรือบทความ สามารถเพิ่มได้จากหน้าแอดมิน
+- App for reading articles or news.
+- News or article can be added from the admin page.
   
-## Project Information
-- Django Framework
-- Bootstrap 5
-- Postgres SQL
-- [requirements](./requirements.txt)
+## Project Information.
+- Django Framework.
+- Bootstrap 5 Templates.
+- Postgres SQL.
+- [Requirements](./requirements.txt)
 
-# Database
-
-## Install `psycopg` for connect to postgres SQL Server
-`pip install psycopg2`
-## Setting Database connection to postgres SQL Server
+# Database.
+## Install `psycopg` for connect to postgres SQL Server.
+```
+pip install psycopg2
+```
+## Setting Database connection to postgres SQL Server.
 ```python
 DATABASES = {
     "default": {
@@ -47,26 +48,31 @@ DATABASES = {
 }
 ```
 
-## Dump and Load database to JSON file
-### install Django Dump Load UTF-8 for windows
-`pip install django-dump-load-utf8`
+## Dump and Load database to JSON file.
+### install Django Dump Load UTF-8 for windows.
+```
+pip install django-dump-load-utf8
+```
 
 
-### Add to INSTALL_APPS [settings.py](/news_writer/settings.py)
+### Add to INSTALL_APPS. [settings.py](/news_writer/settings.py)
 ```python
 INSTALLED_APPS = [
     '...',
     'django_dump_load_utf8',
     '...',
 ]
+```
+### Dumpdata to JSON command.
+```
+python manage.py dumpdatautf8 --output data.json
+```
+### Loaddata to new database command.
 
 ```
-### Dumpdata to JSON command
-`manage.py dumpdatautf8 --output data.json`
-### Loaddata to new database command
-
-`manage.py loaddatautf8 data.json`
-## Entity Relations Diagram ( ERD )
+python manage.py loaddatautf8 data.json
+```
+## Entity Relations Diagram ( ERD ).
 
 ```
 entity Category {
@@ -144,21 +150,25 @@ relationship Comment{
 # Webpage
 ## feeds
 ![image](/screen/feeds.png)
-*หน้าสำหรับหารแสดงข้อมูลเนื้อหาข่าวทั้งหมด เช่น รายชื่อผู้เขียน ข่าว หรือ บทความ โดยจะแบ่งเป็นประเภทเนื้อหา*
+*A page for displaying all news content information, such as a list of authors, news or articles, divided by content type.*
 ## read 
 ![image](/screen/reads.png)
-*หน้าสำหรับการอ่านข่าวและบทความ และจะแสดงเนื้อหาอื่นๆ ของผู้เขียนเดียวกัน หรือหมวดหมู่เดียวกัน*
+*A page for reading news and articles. and will display other content of the same author or same category*
 ## admin
 ![image](/screen/admin.png)
-*หน้าแอดมิน สำหรับการเขียนข่าว หรือ เนื้อหา และยังสามารถเพิ่มผู้เขียน และ ประเภทได้*
+*Admin page for writing news or content and can also add authors and categories.*
 
 
 # Developments
 ## COPY settings.py
-`COPY settins.py settins_dev.py`
+```
+COPY settings.py settings_dev.py
+```
 
 ## COPY manage.py
-`COPY manage.py manage_dev.py`
+```
+COPY manage.py manage_dev.py
+```
 
 *edit manage_dev.py*
 ```python 
