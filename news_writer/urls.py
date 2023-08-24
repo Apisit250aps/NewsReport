@@ -23,6 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls, name='admin'),
     path('', page.index, name='index'),
     path('feeds', page.feeds, name='feeds'),
+    path('read<int:id>', page.read, name='read'),
 ]
 
 from django.conf import settings

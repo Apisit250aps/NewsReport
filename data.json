@@ -1,0 +1,1153 @@
+[
+    {
+        "model": "admin.logentry",
+        "pk": 1,
+        "fields": {
+            "action_time": "2023-08-23T10:43:15.654Z",
+            "user": 1,
+            "content_type": 4,
+            "object_id": "2",
+            "object_repr": "writerman",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 2,
+        "fields": {
+            "action_time": "2023-08-23T10:43:19.118Z",
+            "user": 1,
+            "content_type": 4,
+            "object_id": "2",
+            "object_repr": "writerman",
+            "action_flag": 2,
+            "change_message": "[]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 3,
+        "fields": {
+            "action_time": "2023-08-23T10:44:51.111Z",
+            "user": 1,
+            "content_type": 8,
+            "object_id": "1",
+            "object_repr": "Genaral",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 4,
+        "fields": {
+            "action_time": "2023-08-23T10:45:20.269Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "1",
+            "object_repr": "admin",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 5,
+        "fields": {
+            "action_time": "2023-08-23T10:45:24.507Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "1",
+            "object_repr": "admin",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Verify\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 6,
+        "fields": {
+            "action_time": "2023-08-23T10:46:37.235Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "2",
+            "object_repr": "writerman",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 7,
+        "fields": {
+            "action_time": "2023-08-23T10:47:41.151Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "1",
+            "object_repr": "Title",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 8,
+        "fields": {
+            "action_time": "2023-08-23T11:15:08.846Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "2",
+            "object_repr": "ใจสะอาด ใจสว่าง ใจสงบ",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 9,
+        "fields": {
+            "action_time": "2023-08-24T02:14:44.818Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "1",
+            "object_repr": "ให้อภัยตัวเอง – รู้จักคุณค่าตัวเอง – มีชีวิตเพื่อตัวเอง",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Description\", \"Detail\", \"Like\", \"Read\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 10,
+        "fields": {
+            "action_time": "2023-08-24T02:15:54.480Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "2",
+            "object_repr": "บางทีเราอาจจะโฟกัสที่ปลายทางมากเกินไป",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Description\", \"Detail\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 11,
+        "fields": {
+            "action_time": "2023-08-24T02:16:47.115Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "3",
+            "object_repr": "อย่าทำร้ายตัวเองเพียงเพราะเราไม่สมบูรณ์แบบ แต่ให้รักในสิ่งที่เรา",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 12,
+        "fields": {
+            "action_time": "2023-08-24T02:18:15.659Z",
+            "user": 1,
+            "content_type": 4,
+            "object_id": "3",
+            "object_repr": "snowman",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 13,
+        "fields": {
+            "action_time": "2023-08-24T02:19:20.437Z",
+            "user": 1,
+            "content_type": 8,
+            "object_id": "2",
+            "object_repr": "Life",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 14,
+        "fields": {
+            "action_time": "2023-08-24T02:19:24.710Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "3",
+            "object_repr": "snowman",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 15,
+        "fields": {
+            "action_time": "2023-08-24T02:19:57.438Z",
+            "user": 1,
+            "content_type": 8,
+            "object_id": "3",
+            "object_repr": "marketing",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 16,
+        "fields": {
+            "action_time": "2023-08-24T02:20:14.394Z",
+            "user": 1,
+            "content_type": 8,
+            "object_id": "4",
+            "object_repr": "story",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 17,
+        "fields": {
+            "action_time": "2023-08-24T02:21:23.172Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "4",
+            "object_repr": "ความรักคืออะไร?",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 18,
+        "fields": {
+            "action_time": "2023-08-24T02:22:14.691Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "5",
+            "object_repr": "“ฉลาด” กับ “คิดเป็น”",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 19,
+        "fields": {
+            "action_time": "2023-08-24T02:30:56.077Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "3",
+            "object_repr": "snowman",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 20,
+        "fields": {
+            "action_time": "2023-08-24T02:31:01.285Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "2",
+            "object_repr": "writerman",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 21,
+        "fields": {
+            "action_time": "2023-08-24T02:31:05.369Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "1",
+            "object_repr": "admin",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 22,
+        "fields": {
+            "action_time": "2023-08-24T02:31:30.374Z",
+            "user": 1,
+            "content_type": 4,
+            "object_id": "4",
+            "object_repr": "johnson",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 23,
+        "fields": {
+            "action_time": "2023-08-24T02:32:17.763Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "4",
+            "object_repr": "johnson",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 24,
+        "fields": {
+            "action_time": "2023-08-24T02:32:33.218Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "5",
+            "object_repr": "“ฉลาด” กับ “คิดเป็น”",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Author\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 25,
+        "fields": {
+            "action_time": "2023-08-24T02:32:37.012Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "4",
+            "object_repr": "ความรักคืออะไร?",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Author\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 26,
+        "fields": {
+            "action_time": "2023-08-24T02:32:40.445Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "3",
+            "object_repr": "อย่าทำร้ายตัวเองเพียงเพราะเราไม่สมบูรณ์แบบ แต่ให้รักในสิ่งที่เรา",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Author\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 27,
+        "fields": {
+            "action_time": "2023-08-24T02:32:43.742Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "2",
+            "object_repr": "บางทีเราอาจจะโฟกัสที่ปลายทางมากเกินไป",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Author\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 28,
+        "fields": {
+            "action_time": "2023-08-24T02:32:50.296Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "1",
+            "object_repr": "ให้อภัยตัวเอง – รู้จักคุณค่าตัวเอง – มีชีวิตเพื่อตัวเอง",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Author\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 29,
+        "fields": {
+            "action_time": "2023-08-24T02:42:50.209Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "2",
+            "object_repr": "writerman",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Profile img\"]}}]"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 1,
+        "fields": {
+            "name": "Can add log entry",
+            "content_type": 1,
+            "codename": "add_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 2,
+        "fields": {
+            "name": "Can change log entry",
+            "content_type": 1,
+            "codename": "change_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 3,
+        "fields": {
+            "name": "Can delete log entry",
+            "content_type": 1,
+            "codename": "delete_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 4,
+        "fields": {
+            "name": "Can view log entry",
+            "content_type": 1,
+            "codename": "view_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 5,
+        "fields": {
+            "name": "Can add permission",
+            "content_type": 2,
+            "codename": "add_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 6,
+        "fields": {
+            "name": "Can change permission",
+            "content_type": 2,
+            "codename": "change_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 7,
+        "fields": {
+            "name": "Can delete permission",
+            "content_type": 2,
+            "codename": "delete_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 8,
+        "fields": {
+            "name": "Can view permission",
+            "content_type": 2,
+            "codename": "view_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 9,
+        "fields": {
+            "name": "Can add group",
+            "content_type": 3,
+            "codename": "add_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 10,
+        "fields": {
+            "name": "Can change group",
+            "content_type": 3,
+            "codename": "change_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 11,
+        "fields": {
+            "name": "Can delete group",
+            "content_type": 3,
+            "codename": "delete_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 12,
+        "fields": {
+            "name": "Can view group",
+            "content_type": 3,
+            "codename": "view_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 13,
+        "fields": {
+            "name": "Can add user",
+            "content_type": 4,
+            "codename": "add_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 14,
+        "fields": {
+            "name": "Can change user",
+            "content_type": 4,
+            "codename": "change_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 15,
+        "fields": {
+            "name": "Can delete user",
+            "content_type": 4,
+            "codename": "delete_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 16,
+        "fields": {
+            "name": "Can view user",
+            "content_type": 4,
+            "codename": "view_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 17,
+        "fields": {
+            "name": "Can add content type",
+            "content_type": 5,
+            "codename": "add_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 18,
+        "fields": {
+            "name": "Can change content type",
+            "content_type": 5,
+            "codename": "change_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 19,
+        "fields": {
+            "name": "Can delete content type",
+            "content_type": 5,
+            "codename": "delete_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 20,
+        "fields": {
+            "name": "Can view content type",
+            "content_type": 5,
+            "codename": "view_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 21,
+        "fields": {
+            "name": "Can add session",
+            "content_type": 6,
+            "codename": "add_session"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 22,
+        "fields": {
+            "name": "Can change session",
+            "content_type": 6,
+            "codename": "change_session"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 23,
+        "fields": {
+            "name": "Can delete session",
+            "content_type": 6,
+            "codename": "delete_session"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 24,
+        "fields": {
+            "name": "Can view session",
+            "content_type": 6,
+            "codename": "view_session"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 25,
+        "fields": {
+            "name": "Can add author",
+            "content_type": 7,
+            "codename": "add_author"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 26,
+        "fields": {
+            "name": "Can change author",
+            "content_type": 7,
+            "codename": "change_author"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 27,
+        "fields": {
+            "name": "Can delete author",
+            "content_type": 7,
+            "codename": "delete_author"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 28,
+        "fields": {
+            "name": "Can view author",
+            "content_type": 7,
+            "codename": "view_author"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 29,
+        "fields": {
+            "name": "Can add category",
+            "content_type": 8,
+            "codename": "add_category"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 30,
+        "fields": {
+            "name": "Can change category",
+            "content_type": 8,
+            "codename": "change_category"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 31,
+        "fields": {
+            "name": "Can delete category",
+            "content_type": 8,
+            "codename": "delete_category"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 32,
+        "fields": {
+            "name": "Can view category",
+            "content_type": 8,
+            "codename": "view_category"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 33,
+        "fields": {
+            "name": "Can add comment",
+            "content_type": 9,
+            "codename": "add_comment"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 34,
+        "fields": {
+            "name": "Can change comment",
+            "content_type": 9,
+            "codename": "change_comment"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 35,
+        "fields": {
+            "name": "Can delete comment",
+            "content_type": 9,
+            "codename": "delete_comment"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 36,
+        "fields": {
+            "name": "Can view comment",
+            "content_type": 9,
+            "codename": "view_comment"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 37,
+        "fields": {
+            "name": "Can add reply comment",
+            "content_type": 10,
+            "codename": "add_replycomment"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 38,
+        "fields": {
+            "name": "Can change reply comment",
+            "content_type": 10,
+            "codename": "change_replycomment"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 39,
+        "fields": {
+            "name": "Can delete reply comment",
+            "content_type": 10,
+            "codename": "delete_replycomment"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 40,
+        "fields": {
+            "name": "Can view reply comment",
+            "content_type": 10,
+            "codename": "view_replycomment"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 41,
+        "fields": {
+            "name": "Can add follow",
+            "content_type": 11,
+            "codename": "add_follow"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 42,
+        "fields": {
+            "name": "Can change follow",
+            "content_type": 11,
+            "codename": "change_follow"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 43,
+        "fields": {
+            "name": "Can delete follow",
+            "content_type": 11,
+            "codename": "delete_follow"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 44,
+        "fields": {
+            "name": "Can view follow",
+            "content_type": 11,
+            "codename": "view_follow"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 45,
+        "fields": {
+            "name": "Can add content",
+            "content_type": 12,
+            "codename": "add_content"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 46,
+        "fields": {
+            "name": "Can change content",
+            "content_type": 12,
+            "codename": "change_content"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 47,
+        "fields": {
+            "name": "Can delete content",
+            "content_type": 12,
+            "codename": "delete_content"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 48,
+        "fields": {
+            "name": "Can view content",
+            "content_type": 12,
+            "codename": "view_content"
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 1,
+        "fields": {
+            "password": "pbkdf2_sha256$600000$cQvUSoEAx32lHkM4kVbJJO$0HoAeDT9L7yO3Q3Us4tlwQiu9oA2oqZXBWVA51Vc6BY=",
+            "last_login": "2023-08-24T02:13:17.753Z",
+            "is_superuser": true,
+            "username": "admin",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2023-08-23T10:38:14.066Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 2,
+        "fields": {
+            "password": "pbkdf2_sha256$600000$2WiiZeaCbn6aM8cN5HVwIW$VGO8oxCfKmGhSAS6W5hjfniXJSaf0Gd2IiM/95e4pOA=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "writerman",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-08-23T10:43:15Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 3,
+        "fields": {
+            "password": "pbkdf2_sha256$600000$yqg80I9ZaH66UNiYCXnWCQ$vwo4C01EueZvEM0w7ld6g+zrw7Q0iuq9kx6IROnk4Ho=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "snowman",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-08-24T02:18:15.315Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 4,
+        "fields": {
+            "password": "pbkdf2_sha256$600000$VuJ8jY8ilUJahHLWTSUZOY$caJ/FHlzzOFAdkirAS+zLvgajv84R6CFuyUv3Wr2bRE=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "johnson",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-08-24T02:31:30.056Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 1,
+        "fields": {
+            "app_label": "admin",
+            "model": "logentry"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 2,
+        "fields": {
+            "app_label": "auth",
+            "model": "permission"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 3,
+        "fields": {
+            "app_label": "auth",
+            "model": "group"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 4,
+        "fields": {
+            "app_label": "auth",
+            "model": "user"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 5,
+        "fields": {
+            "app_label": "contenttypes",
+            "model": "contenttype"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 6,
+        "fields": {
+            "app_label": "sessions",
+            "model": "session"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 7,
+        "fields": {
+            "app_label": "news",
+            "model": "author"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 8,
+        "fields": {
+            "app_label": "news",
+            "model": "category"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 9,
+        "fields": {
+            "app_label": "news",
+            "model": "comment"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 10,
+        "fields": {
+            "app_label": "news",
+            "model": "replycomment"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 11,
+        "fields": {
+            "app_label": "news",
+            "model": "follow"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 12,
+        "fields": {
+            "app_label": "news",
+            "model": "content"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "4hdfe8d1inco06kgwxsuszjztys6fa81",
+        "fields": {
+            "session_data": ".eJxVjMsOwiAQRf-FtSFQKA-X7v0GMjAzUjU0Ke3K-O_apAvd3nPOfYkE21rT1mlJE4qz0OL0u2UoD2o7wDu02yzL3NZlynJX5EG7vM5Iz8vh_h1U6PVbK8PGofYmMqKy0SP5ogsCWR6AR9KOMAbQ6CLkUYXCAAFzRmd4sCTeHwYGOVY:1qYlIM:ePcvzM-u3hiTHszLvjPIpAaSkGtjUk88BB9UL25c9Uk",
+            "expire_date": "2023-09-06T10:41:02.472Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "b5uadeq0tc0zcosm05giz75d2kjzrqxr",
+        "fields": {
+            "session_data": ".eJxVjMsOwiAQRf-FtSFQKA-X7v0GMjAzUjU0Ke3K-O_apAvd3nPOfYkE21rT1mlJE4qz0OL0u2UoD2o7wDu02yzL3NZlynJX5EG7vM5Iz8vh_h1U6PVbK8PGofYmMqKy0SP5ogsCWR6AR9KOMAbQ6CLkUYXCAAFzRmd4sCTeHwYGOVY:1qYzqX:nUPMy9JMDZHCtbYRjancE6uTD5AnDvNoRfNfDT84Qio",
+            "expire_date": "2023-09-07T02:13:17.888Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "mqx4n6rrz6nl8wkne4w0vgijuu35ricg",
+        "fields": {
+            "session_data": ".eJxVjMsOwiAQRf-FtSFQKA-X7v0GMjAzUjU0Ke3K-O_apAvd3nPOfYkE21rT1mlJE4qz0OL0u2UoD2o7wDu02yzL3NZlynJX5EG7vM5Iz8vh_h1U6PVbK8PGofYmMqKy0SP5ogsCWR6AR9KOMAbQ6CLkUYXCAAFzRmd4sCTeHwYGOVY:1qYzqU:uJo712Ju-UOKCM4qK0c3Yz3OpOcoqh-0vTZNdj8r3mo",
+            "expire_date": "2023-09-07T02:13:14.105Z"
+        }
+    },
+    {
+        "model": "news.category",
+        "pk": 1,
+        "fields": {
+            "category": "Genaral"
+        }
+    },
+    {
+        "model": "news.category",
+        "pk": 2,
+        "fields": {
+            "category": "Life"
+        }
+    },
+    {
+        "model": "news.category",
+        "pk": 3,
+        "fields": {
+            "category": "marketing"
+        }
+    },
+    {
+        "model": "news.category",
+        "pk": 4,
+        "fields": {
+            "category": "story"
+        }
+    },
+    {
+        "model": "news.author",
+        "pk": 1,
+        "fields": {
+            "user": 1,
+            "profile_img": "profile/man-portrait.jpg",
+            "occupation": "programmer",
+            "follower": 9999999,
+            "description": "-",
+            "category": 3,
+            "verify": true
+        }
+    },
+    {
+        "model": "news.author",
+        "pk": 2,
+        "fields": {
+            "user": 2,
+            "profile_img": "profile/write.jpg",
+            "occupation": "programmer",
+            "follower": 0,
+            "description": "-",
+            "category": 2,
+            "verify": false
+        }
+    },
+    {
+        "model": "news.author",
+        "pk": 3,
+        "fields": {
+            "user": 3,
+            "profile_img": "profile/snowman.jpg",
+            "occupation": "Writer",
+            "follower": 10,
+            "description": "none",
+            "category": 1,
+            "verify": true
+        }
+    },
+    {
+        "model": "news.author",
+        "pk": 4,
+        "fields": {
+            "user": 4,
+            "profile_img": "profile/johnson.jpg",
+            "occupation": "writer",
+            "follower": 10,
+            "description": "-",
+            "category": 4,
+            "verify": true
+        }
+    },
+    {
+        "model": "news.content",
+        "pk": 1,
+        "fields": {
+            "author": 3,
+            "poster": "physician-consulting-his-patient-clinic_0KkYhCw.jpg",
+            "title": "ให้อภัยตัวเอง – รู้จักคุณค่าตัวเอง – มีชีวิตเพื่อตัวเอง",
+            "description": "ก่อนจะโอบรับการเดินทางครั้งใหม่ด้วยกำลังใจเต็มเปี่ยมไปด้วยกัน",
+            "detail": "การเดินทางตลอดหนึ่งปีที่ผ่านมา เราต้องเจอกับเรื่องราวมากมาย เผชิญหน้ากับเหตุการณ์ไม่คาดคิด และรับมือกับหลายความรู้สึกที่เกาะกุมอยู่ในใจ ด้วยเหตุนี้ ยิ่งใกล้ช่วงท้ายปี หลายคนเลยอยากปล่อยให้ ‘ปีเก่า’ เป็นเรื่องราวของ ‘ปีเก่า’ พร้อมทิ้งเรื่องราวเดิมๆ ไว้ข้างหลังและมุ่งหน้าสู่การเดินทางใหม่ที่กำลังจะมาถึง\r\n\r\nแต่แทนที่จะโยนทิ้งและปล่อยให้เป็นเรื่องราวในอดีตเฉยๆ อย่าลืมว่าจริงๆ แล้วการเดินทางอันยาวนานตลอด 1 ปีที่ผ่านมาให้อะไรเรามากมาย  มาร่วมส่งท้ายปีเก่าด้วยการรู้จักตัวเอง ย้อนมองบทเรียน และรับกำลังใจดีๆ ผ่าน 12 บทความให้กำลังใจจาก Mission To The Moon\r\n\r\nก่อนจะโอบรับการเดินทางครั้งใหม่ด้วยกำลังใจเต็มเปี่ยมไปด้วยกัน",
+            "like": 37,
+            "read": 30,
+            "write": "2023-08-23T10:47:41.149Z"
+        }
+    },
+    {
+        "model": "news.content",
+        "pk": 2,
+        "fields": {
+            "author": 4,
+            "poster": "woman-practicing-yoga-mat-home.jpg",
+            "title": "บางทีเราอาจจะโฟกัสที่ปลายทางมากเกินไป",
+            "description": "มัวแต่ตั้งคำถามกับตัวเองว่าทำไมเราถึงยังไม่ถึงเป้าหมายสักที",
+            "detail": "“บางทีเราอาจจะโฟกัสที่ปลายทางมากเกินไป มัวแต่ตั้งคำถามกับตัวเองว่าทำไมเราถึงยังไม่ถึงเป้าหมายสักที จนมองไม่เห็นว่าระหว่างทางเราได้ทำอะไรไปแล้วบ้าง”\r\n\r\nร่วมปรับความคิดและการกระทำ ไม่ให้รู้สึกว่าเรากำลังจมอยู่กับที่เดิมและไม่พัฒนาไปไหน ได้ในบทความ “เป็นกันอยู่หรือเปล่า? หมดความมั่นใจ รู้สึกชีวิตไม่ไปไหน ทำอย่างไรดี”",
+            "like": 42,
+            "read": 39,
+            "write": "2023-08-23T11:15:08.843Z"
+        }
+    },
+    {
+        "model": "news.content",
+        "pk": 3,
+        "fields": {
+            "author": 3,
+            "poster": "delicious-meal-with-sambal-arrangement.jpg",
+            "title": "อย่าทำร้ายตัวเองเพียงเพราะเราไม่สมบูรณ์แบบ แต่ให้รักในสิ่งที่เรา",
+            "description": "หากปีที่ผ่านมาเสียเวลาไปกับความเครียดและความคิดมาก",
+            "detail": "“อย่าทำร้ายตัวเองเพียงเพราะเราไม่สมบูรณ์แบบ แต่ให้รักในสิ่งที่เราเป็น ให้โอกาสกับทุกเส้นทางและความผิดพลาดในชีวิต”\r\n\r\nหากปีที่ผ่านมาเสียเวลาไปกับความเครียดและความคิดมาก ปีนี้ลองปล่อยวางแล้วมาเริ่มกันใหม่ เรียนรู้ที่จะรักตัวเองให้มากขึ้น ทำงานได้อย่างมีประสิทธิภาพมากขึ้น และใช้ชีวิตได้อย่างคุ้มค่ามากขึ้น ผ่าน 5 เทคนิค ฝึกสมองให้ “คิดอย่างเป็นระบบ”",
+            "like": 100,
+            "read": 859,
+            "write": "2023-08-24T02:16:47.113Z"
+        }
+    },
+    {
+        "model": "news.content",
+        "pk": 4,
+        "fields": {
+            "author": 2,
+            "poster": "repairman-doing-air-conditioner-service.jpg",
+            "title": "ความรักคืออะไร?",
+            "description": "คำตอบเบื้องต้นคงไม่ต่างจากที่หลายคนคิด",
+            "detail": "คำตอบเบื้องต้นคงไม่ต่างจากที่หลายคนคิด คือ ยากจะนิยามไปในมุมเดียว แนวเดียว หรือด้วยประโยคเดียว เพราะคำว่า ความรัก เองก็มีหลายรูปแบบ ทั้งปัจจัย บุคคล และสิ่งแวดล้อม กระทั่งว่า รักแท้ หรือ รักเทียม (รักลวง, รักปลอม, รักหวังผล)…\r\n\r\nแต่ถ้าสรุปแค่นั้น ก็ไม่รู้จะเขียนขึ้นมาทำไม (…เนอะ) จึงขอเขียนความหมายของความรักใน มุมมองหนึ่ง ด้วยประสบการณ์ที่ดี และไม่ดี พลาด หรือเข้าใจผิด ในเรื่องนี้มาพอสมควร ว่าในที่สุดแล้ว ความรักคืออะไร..\r\n\r\nหมายเหตุ “รัก” ในที่นี้กล่าวกันบนรูปแบบ คนรัก (คู่รัก) กัน จะเพศตรงข้ามหรือเพศเดียวกันก็ตาม แต่ความสัมพันธ์ร่วมสายเลือด รักลูก รักพ่อแม่ พี่น้อง รักญาติ อันนั้น ละไว้ ในฐานที่เข้าใจ ไม่เช่นนั้นมันจะกว้างเกินประเด็นไป",
+            "like": 1000,
+            "read": 10000,
+            "write": "2023-08-24T02:21:23.170Z"
+        }
+    },
+    {
+        "model": "news.content",
+        "pk": 5,
+        "fields": {
+            "author": 1,
+            "poster": "delicious-meal-with-sambal-arrangement_7pVZL7S.jpg",
+            "title": "“ฉลาด” กับ “คิดเป็น”",
+            "description": "ความ “ฉลาด” กับการ “คิดเป็น” ผิวเผินอาจดูคล้าย แต่ดูให้ดีช่างแตกต่าง เพราะ “คนคิดเป็น อาจไม่ต้องฉลาด คนฉลาด อาจคิดไม่เป็น”",
+            "detail": "ในบริบทหนึ่ง ความฉลาดอาจสะท้อนถึง ไหวพริบ เชาว์ปัญญา ความฉับไวทางความคิด ดูจะเป็นแนวใครดีใครได้ ใครไว ใครเด่น ใครเห็นคนนั้นได้โอกาส…\r\n\r\nแต่การ “คิดเป็น” ย่อมมาจากประสบการณ์ และสิ่งสำคัญ คือ สติ กับการเรียนรู้ ดังที่ทราบดี ฉลาดแค่ไหนก็พลาดได้ แต่จะฉลาดหรือไม่ หากผิดพลาดหรือเกิดอะไรขึ้นแล้วไม่มีสติ ไม่เรียนรู้ ไม่ดูตัวเอง ก็ยากจะ คิดเป็น\r\n\r\nความฉลาดสร้างความได้เปรียบได้ง่ายในหลายโอกาส แต่การคิดเป็น สร้างความยั่งยืน ก้าวหน้า และความสมบูรณ์\r\n\r\nเพราะหากฉลาดแต่คิดไม่เป็น เช่น ฉลาดแกมโกง ฉลาดแต่เรื่องเฉพาะหน้า ไปจนถึง “อวดฉลาด” ซึ่งแม้จะฉลาดจริง แต่ผลลัพธ์มันจะไม่สะท้อนความฉลาดเลยในอนาคต\r\n\r\nแน่นอนว่า หากฉลาดและคิดเป็นด้วยคือสิ่งที่ดีมาก หรือในบางคนเขาบอกว่า “ฉลาดแล้วต้องเฉลียว” นั่นก็คล้ายกัน\r\n\r\nแต่ก็เพราะเราไม่อาจฉลาดได้ทุกเรื่องทุกเวลา การคิดเป็นจึงสำคัญเสมอ\r\n\r\nแต่ที่น่าห่วงที่สุดคือ ไม่ฉลาด แถมยังคิดไม่เป็น คนเช่นนี้เห็นทีจะผิดซ้ำซาก หลงทางไปตลอด มีอะไรก็คงไม่เหลือ มิใช่แค่ทรัพย์สิน เงินทอง แต่หลาย ๆ อย่างรวมทั้งอนาคต เพราะมีประสบการณ์ เจอสถานการณ์ใดแต่ “คิดไม่เป็น” เลย คนฉลาดมากแค่ไหน ก็ช่วยเขาไม่ได้หรอก…\r\n\r\nเราฉลาดแค่ไหนจึงอาจไม่สำคัญ วันนี้ทบทวนหรือยัง เรื่องไหนที่เรายังคิดไม่ได้ คิดไม่เป็นเสียที…",
+            "like": 200,
+            "read": 1000,
+            "write": "2023-08-24T02:22:14.688Z"
+        }
+    }
+]

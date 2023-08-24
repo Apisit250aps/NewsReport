@@ -5,7 +5,8 @@ __pycache__/
 
 # C extensions
 *.so
-
+settings_dev.py
+manage_dev.py
 # Distribution / packaging
 .Python
 build/
