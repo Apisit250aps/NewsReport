@@ -21,7 +21,6 @@ class AuthorAdmin(admin.ModelAdmin):
     
     ]
 
-
 @admin.register(models.Content)
 class ContentAdmin(admin.ModelAdmin):
     list_display = [

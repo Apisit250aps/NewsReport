@@ -10,7 +10,7 @@
     - [Add to INSTALL\_APPS. settings.py](#add-to-install_apps-settingspy)
     - [Dumpdata to JSON command.](#dumpdata-to-json-command)
     - [Loaddata to new database command.](#loaddata-to-new-database-command)
-  - [Entity Relations Diagram ( ERD ).](#entity-relations-diagram--erd-)
+  - [Entity Relations Diagram](#entity-relations-diagram)
 - [Webpage](#webpage)
   - [feeds](#feeds)
   - [read](#read)
@@ -72,77 +72,92 @@ python manage.py dumpdatautf8 --output data.json
 ```
 python manage.py loaddatautf8 data.json
 ```
-## Entity Relations Diagram ( ERD ).
 
+
+## Entity Relations Diagram
 ```
 entity Category {
   id: integer PK
   category: string
+  img: string
 }
 
 entity Author {
   id: integer PK
-  user: integer FK > User
+  user: string FK
   profile_img: string
   occupation: string
-  follower: integer
   description: string
-  category: integer FK > Category
   verify: boolean
-}
-
-entity Follow {
-  id: integer PK
-  author: integer FK > Author
-  user: integer FK > User
-  follow_date: datetime
 }
 
 entity Content {
   id: integer PK
-  author: integer FK > Author
+  author: integer FK
   poster: string
   title: string
   description: string
   detail: string
-  like: integer
   read: integer
+  category: integer FK
   write: datetime
+}
+
+entity Follow {
+  id: integer PK
+  author: integer FK
+  user: integer FK
+  follow_date: datetime
+}
+
+entity Like {
+  id: integer PK
+  content: integer FK
+  user: integer FK
 }
 
 entity Comment {
   id: integer PK
-  user: integer FK > User
-  content: integer FK > Content
+  user: integer FK
+  content: integer FK
   detail: string
   like: integer
 }
 
 entity ReplyComment {
   id: integer PK
-  user: integer FK > User
-  comment: integer FK > Comment
+  user: integer FK
+  comment: integer FK
   detail: string
-  link: integer FK > Comment
+  like: integer
 }
 
-relationship Author{
-  author }--{ content }
-  author }--{ category }
-  author }--{ follow }
+relationship "One to many" between Category and Content {
+  Category {id} -> Content {category}
 }
 
-relationship Content{
-  content }--{ comment }
-  content }--{ replyComment }
+relationship "One to one" between Author and Content {
+  Author {id} -> Content {author}
 }
 
-relationship User{
-  user }--{ follow }
+relationship "Many to many" between User and Follow {
+  User {id} -> Follow {user}
+  Follow {author} -> Author {id}
 }
 
-relationship Comment{
-  comment }--{ replyComment }
+relationship "Many to one" between Content and Like {
+  Content {id} -> Like {content}
+  Like {user} -> User {id}
+}
+
+relationship "One to many" between Content and Comment {
+  Content {id} -> Comment {content}
+  Comment {user} -> User {id}
+}
+
+relationship "One to many" between Comment and ReplyComment {
+  Comment {id} -> ReplyComment {comment}
+  ReplyComment {user} -> User {id}
 }
 
 ```
