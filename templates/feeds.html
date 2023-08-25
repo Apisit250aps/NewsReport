@@ -1,42 +1,231 @@
 {% extends 'index.html' %}
-
+{% load static %}
 {% block content %}
-<style>
-    a {
-        text-decoration: none;
-        color: black;
-    }
-    a:hover{
-        color: darkgray;
-    }
-
-    p {
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow: hidden;
-    }
-</style>
 <main>
-    <div class="row row-cols-3 m-auto">
-        {% for content in news %}
-        <div class="col">
-            <div class="card  border-0 shadow">
-                <div class="card-body">
-                    <h5 class="card-title"><a href="">{{content.title}}</a></h5>
-                    <small class="card-subtitle mb-2 text-muted">{{content.post_date}}</small>
-                    <hr>
-                    <p class="card-text">{{content.detail}}</p>
-                    <hr>
-                    <div class="d-flex flex-row justify-content-between">
-                        <a href="#" class="card-link">ข่าว{{content.category}}</a>
-                        <a href="#" class="card-link">โดย {{content.post_by}}</a>
+    <section class="hero-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-12">
+                    <div class="text-center mb-5 pb-2">
+                        <h1 class="text-white">Listen to Pod Talk</h1>
+
+                        <p class="text-white">
+                            Listen it everywhere. Explore your fav podcasts.
+                        </p>
+
+                        <a href="#section_2" class="btn custom-btn smoothscroll mt-3">Start listening</a>
+                    </div>
+
+                    <div class="owl-carousel owl-theme">
+                        {% for auth in author %}
+                        <div class="owl-carousel-info-wrap item">
+                            <img src="media/{{auth.profile_img}}" class="owl-carousel-image img-fluid" alt="" />
+
+                            <div class="owl-carousel-info">
+                                <h4 class="mb-2">
+                                    <a href="{% url 'filter-author' auth.id %}">{{auth.user}}</a>
+                                    {% if auth.verify == 1 %}
+                                    <img src="{% static 'images/verified.png' %}"
+                                        class="owl-carousel-verified-image img-fluid" alt="" />
+                                    {% endif %}
+                                </h4>
+                                <span class="badge">{{auth.occupation}}</span>
+                            </div>
+                            <div class="social-share">
+                                <ul class="social-icon">
+                                    <li class="social-icon-item">
+                                        <a href="#" class="social-icon-link bi-twitter"></a>
+                                    </li>
+
+                                    <li class="social-icon-item">
+                                        <a href="#" class="social-icon-link bi-facebook"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        {% endfor %}
                     </div>
                 </div>
             </div>
         </div>
-        {% endfor %}
+    </section>
 
-    </div>
+    <section class="latest-podcast-section section-padding pb-0" id="section_2">
+        <div class="container">
+            <div class="row row-cols-1 m-auto justify-content-center">
+                <div class="col">
+                    <div class="section-title-wrap mb-5">
+                        <h4 class="section-title">Lastest episodes</h4>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="row row-cols-1 row-cols-lg-2 m-auto">
+                        {% for content in last_content %}
+                        <div class="col my-2">
+                            <div class="custom-block d-flex">
+                                <div class="">
+                                    <div class="custom-block-icon-wrap">
+                                        <div class="section-overlay"></div>
+                                        <a href="detail-page.html" class="custom-block-image-wrap">
+                                            <img src="{{ content.poster }}" class="custom-block-image img-fluid" alt="" />
+                                        </a>
+                                    </div>
+        
+                                    <div class="mt-2">
+                                        <a href="#" class="btn custom-btn"> Subscribe </a>
+                                    </div>
+                                </div>
+        
+                                <div class="custom-block-info">
+                                    <div class="custom-block-top d-flex mb-1">
+                                        <small class="me-4">
+                                            <i class="bi-clock-fill custom-icon"></i>
+                                            {{content.write}}
+                                            
+                                        </small>
+                                        <a class="" href="">
+                                            <small style="color: #0c9;"><b>{{content.category}}</b></small>
+                                        </a>
+        
+                                        
+                                    </div>
+        
+        
+                                    <h5 class="mb-2">
+                                        <a href="{% url 'read' content.id %}" id="title"> {{content.title}} </a>
+                                    </h5>
+                                    
+        
+                                    <div class="profile-block d-flex">
+                                        <img src="{{ content.author_profile }}" class="profile-block-image img-fluid" alt="" />
+        
+                                        <p>
+                                            {{ content.author }}
+                                            <img src="images/verified.png" class="verified-image img-fluid" alt="" />
+                                            <strong></strong>
+                                        </p>
+                                    </div>
+        
+                                    <p class="mb-0">{{content.description}}</p>
+        
+                                    <div class="custom-block-bottom d-flex justify-content-between mt-3">
+                                        <a href="#" class="bi-eye me-1">
+                                            <span>{{content.read}}</span>
+                                        </a>
+        
+                                        <a href="#" class="bi-heart me-1">
+                                            <span>{{content.like}}</span>
+                                        </a>
+        
+        
+                                    </div>
+                                </div>
+        
+                                
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                
+
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <section class="topics-section section-padding pb-0" id="section_3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-12">
+                    <div class="section-title-wrap mb-5">
+                        <h4 class="section-title">Topics</h4>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="row row-cols-2 row-cols-lg-5 m-auto">
+                        {% for topic in topics %}
+                        <div class="col">
+                            <div class="custom-block custom-block-overlay">
+                                <a href="detail-page.html" class="custom-block-image-wrap">
+                                    <img src="media/{{ topic.img }}" class="custom-block-image img-fluid" alt="" />
+                                </a>
+
+                                <div class="custom-block-info custom-block-overlay-info">
+                                    <h5 class="mb-1">
+                                        <a href="listing-page.html"> {{topic.category}} </a>
+                                    </h5>
+
+                                    <p class="badge mb-0">{{topic.len}} Stories</p>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <section class="trending-podcast-section section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-12">
+                    <div class="section-title-wrap mb-5">
+                        <h4 class="section-title">Trending episodes</h4>
+                    </div>
+                </div>
+                {% for t in trends %}
+                <div class="col-lg-4 col-12 mb-4 mb-lg-0">
+                    <div class="custom-block custom-block-full">
+                        <div class="custom-block-image-wrap">
+                            <a href="detail-page.html">
+                                <img src="{{t.poster}}" class="custom-block-image img-fluid" alt="" />
+                            </a>
+                        </div>
+
+                        <div class="custom-block-info">
+                            
+                            <h5 class="mb-2" id="title">
+                                <a href="{% url 'read' t.id %}"> {{t.title}} </a>
+                            </h5>
+
+                            <div class="profile-block d-flex">
+                                <img src="{{ t.author_profile }}" class="profile-block-image img-fluid" alt="" />
+
+                                <p>
+                                    {{t.author}}
+                                    <strong>{{t.occupation}}</strong>
+                                </p>
+                            </div>
+
+                            <p class="mb-0">{{t.description}}</p>
+
+                            <div class="custom-block-bottom d-flex justify-content-between mt-3">
+
+
+                                <a href="#" class="bi-heart me-1">
+                                    <span>{{t.like}}</span>
+                                </a>
+
+                                <a href="#" class="bi-eye me-1">
+                                    <span>{{t.read}}</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </section>
 </main>
 {% endblock content %}

@@ -9,7 +9,7 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-  <title>Pod Talk - Free Bootstrap 5 CSS Template</title>
+  <title>README</title>
 
   <!-- CSS FILES -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -30,6 +30,30 @@
 
   <link href="{% static 'css/templatemo-pod-talk.css' %}" rel="stylesheet" />
   <link rel="stylesheet" href="{% static 'style.css' %}">
+
+  <style>
+    * {
+			font-family: 'Noto Sans Thai', sans-serif;
+			-ms-overflow-style: none;
+			/* IE and Edge */
+			scrollbar-width: none;
+			/* Firefox */
+		}
+		*::-webkit-scrollbar {
+			display: none;
+		}
+
+    #title {
+      word-wrap: break-word;
+   
+    }
+
+    #content-filter {
+      overflow-y: scroll;
+      height: 750px;
+      
+    }
+  </style>
   <!--
 
 TemplateMo 584 Pod Talk
@@ -40,298 +64,66 @@ https://templatemo.com/tm-584-pod-talk
 </head>
 
 <body>
-  <main>
-    <nav class="navbar navbar-expand-lg">
-      <div class="container">
-        <a class="navbar-brand me-lg-5 me-0" href="index.html">
-          <img src="{% static 'images/pod-talk-logo.png' %}" class="logo-image img-fluid" alt="templatemo pod talk" />
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand me-lg-5 me-0" href="{% url 'index' %}">
+            <img src="{% static 'images/pod-talk-logo.png' %}" class="logo-image img-fluid"
+                alt="templatemo pod talk" />
         </a>
 
         <form action="#" method="get" class="custom-form search-form flex-fill me-3" role="search">
-          <div class="input-group input-group-lg">
-            <input name="search" type="search" class="form-control" id="search" placeholder="Search Podcast"
-              aria-label="Search" />
+            <div class="input-group input-group-lg">
+                <input name="search" type="search" class="form-control" id="search" placeholder="Search Podcast"
+                    aria-label="Search" />
 
-            <button type="submit" class="form-control" id="submit">
-              <i class="bi-search"></i>
-            </button>
-          </div>
+                <button type="submit" class="form-control" id="submit">
+                    <i class="bi-search"></i>
+                </button>
+            </div>
         </form>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-lg-auto">
-            <li class="nav-item">
-              <a class="nav-link active" href="index.html">Home</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
-            </li>
-
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button"
-                data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
-
-              <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                <li>
-                  <a class="dropdown-item" href="listing-page.html">Listing Page</a>
+            <ul class="navbar-nav ms-lg-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">Home</a>
                 </li>
 
-                <li>
-                  <a class="dropdown-item" href="detail-page.html">Detail Page</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
                 </li>
-              </ul>
-            </li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-          </ul>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
 
-          <div class="ms-4">
-            <a href="#section_3" class="btn custom-btn custom-border-btn smoothscroll">Get started</a>
-          </div>
+                    <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                        <li>
+                            <a class="dropdown-item" href="listing-page.html">Listing Page</a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="detail-page.html">Detail Page</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+
+            <div class="ms-4">
+                <a href="#section_3" class="btn custom-btn custom-border-btn smoothscroll">Get started</a>
+            </div>
         </div>
-      </div>
-    </nav>
-
-    <section class="hero-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 col-12">
-            <div class="text-center mb-5 pb-2">
-              <h1 class="text-white">Listen to Pod Talk</h1>
-
-              <p class="text-white">
-                Listen it everywhere. Explore your fav podcasts.
-              </p>
-
-              <a href="#section_2" class="btn custom-btn smoothscroll mt-3">Start listening</a>
-            </div>
-
-            <div class="owl-carousel owl-theme">
-              {% for auth in author %}
-              <div class="owl-carousel-info-wrap item">
-                <img src="media/{{auth.profile_img}}" class="owl-carousel-image img-fluid" alt="" />
-
-                <div class="owl-carousel-info">
-                  <h4 class="mb-2">
-                    {{auth.user}}
-                    {% if auth.verify == 1 %}
-                    <img src="{% static 'images/verified.png' %}" class="owl-carousel-verified-image img-fluid"
-                      alt="" />
-                    {% endif %}
-                  </h4>
-                  <span class="badge">{{auth.occupation}}</span>
-                </div>
-                <div class="social-share">
-                  <ul class="social-icon">
-                    <li class="social-icon-item">
-                      <a href="#" class="social-icon-link bi-twitter"></a>
-                    </li>
-
-                    <li class="social-icon-item">
-                      <a href="#" class="social-icon-link bi-facebook"></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              {% endfor %}
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="latest-podcast-section section-padding pb-0" id="section_2">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-12 col-12">
-            <div class="section-title-wrap mb-5">
-              <h4 class="section-title">Lastest episodes</h4>
-            </div>
-          </div>
-          {% for content in last_content %}
-          <div class="col-lg-6 col-12 mb-4 mb-lg-0">
-            <div class="custom-block d-flex">
-              <div class="">
-                <div class="custom-block-icon-wrap">
-                  <div class="section-overlay"></div>
-                  <a href="detail-page.html" class="custom-block-image-wrap">
-                    <img src="{{ content.poster }}" class="custom-block-image img-fluid" alt="" />
-                  </a>
-                </div>
-
-                <div class="mt-2">
-                  <a href="#" class="btn custom-btn"> Subscribe </a>
-                </div>
-              </div>
-
-              <div class="custom-block-info">
-                <div class="custom-block-top d-flex mb-1">
-                  {% comment %} <small class="me-4">
-                    <i class="bi-clock-fill custom-icon"></i>
-                    50 Minutes
-                  </small> {% endcomment %}
-
-                  {% comment %} <small>Episode <span class="badge">15</span></small> {% endcomment %}
-                </div>
-
-                <h5 class="mb-2">
-                  <a href="{% url 'read' content.id %}"> {{content.title}} </a>
-                </h5>
-
-                <div class="profile-block d-flex">
-                  <img src="{{ content.author_profile }}" class="profile-block-image img-fluid" alt="" />
-
-                  <p>
-                    {{ content.author }}
-                    <img src="images/verified.png" class="verified-image img-fluid" alt="" />
-                    <strong></strong>
-                  </p>
-                </div>
-
-                <p class="mb-0">{{content.description}}</p>
-
-                <div class="custom-block-bottom d-flex justify-content-between mt-3">
-                  <a href="#" class="bi-eye me-1">
-                    <span>{{content.read}}</span>
-                  </a>
-
-                  <a href="#" class="bi-heart me-1">
-                    <span>{{content.like}}</span>
-                  </a>
-
-
-                </div>
-              </div>
-
-              <div class="d-flex flex-column ms-auto">
-                <a href="#" class="badge ms-auto">
-                  <i class="bi-heart"></i>
-                </a>
-
-                <a href="#" class="badge ms-auto">
-                  <i class="bi-bookmark"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          {% endfor %}
-
-
-
-
-        </div>
-      </div>
-    </section>
-
-    <section class="topics-section section-padding pb-0" id="section_3">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 col-12">
-            <div class="section-title-wrap mb-5">
-              <h4 class="section-title">Topics</h4>
-            </div>
-          </div>
-          <div class="col-12">
-            <div class="row row-cols-2 row-cols-lg-5 m-auto">
-              {% for topic in topics %}
-              <div class="col">
-                <div class="custom-block custom-block-overlay">
-                  <a href="detail-page.html" class="custom-block-image-wrap">
-                    <img src="media/{{ topic.img }}" class="custom-block-image img-fluid" alt="" />
-                  </a>
-
-                  <div class="custom-block-info custom-block-overlay-info">
-                    <h5 class="mb-1">
-                      <a href="listing-page.html"> {{topic.category}} </a>
-                    </h5>
-
-                    <p class="badge mb-0">{{topic.len}} Episodes</p>
-                  </div>
-                </div>
-              </div>
-              {% endfor %}
-            </div>
-          </div>
-
-
-        </div>
-      </div>
-    </section>
-
-    <section class="trending-podcast-section section-padding">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 col-12">
-            <div class="section-title-wrap mb-5">
-              <h4 class="section-title">Trending episodes</h4>
-            </div>
-          </div>
-          {% for t in trends %}
-          <div class="col-lg-4 col-12 mb-4 mb-lg-0">
-            <div class="custom-block custom-block-full">
-              <div class="custom-block-image-wrap">
-                <a href="detail-page.html">
-                  <img src="{{t.poster}}" class="custom-block-image img-fluid" alt="" />
-                </a>
-              </div>
-
-              <div class="custom-block-info">
-                <h5 class="mb-2">
-                  <a href="detail-page.html">{{t.title}}</a>
-                </h5>
-
-                <div class="profile-block d-flex">
-                  <img src="{{ t.author_profile }}" class="profile-block-image img-fluid" alt="" />
-
-                  <p>
-                    {{t.author}}
-                    <strong>{{t.occupation}}</strong>
-                  </p>
-                </div>
-
-                <p class="mb-0">{{t.description}}</p>
-
-                <div class="custom-block-bottom d-flex justify-content-between mt-3">
-                  <a href="#" class="bi-headphones me-1">
-                    <span>100k</span>
-                  </a>
-
-                  <a href="#" class="bi-heart me-1">
-                    <span>2.5k</span>
-                  </a>
-
-                  <a href="#" class="bi-chat me-1">
-                    <span>924k</span>
-                  </a>
-                </div>
-              </div>
-
-              <div class="social-share d-flex flex-column ms-auto">
-                <a href="#" class="badge ms-auto">
-                  <i class="bi-heart"></i>
-                </a>
-
-                <a href="#" class="badge ms-auto">
-                  <i class="bi-bookmark"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          {% endfor %}
-
-        </div>
-      </div>
-    </section>
-  </main>
+    </div>
+</nav>
+  {% block content %}{% endblock content %}
 
   <footer class="site-footer">
     <div class="container">
