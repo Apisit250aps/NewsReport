@@ -1,40 +1,76 @@
+<style>
+@font-face {
+    font-family: 'monospace';
+    unicode-range: U+41-5A, U+61-7A, U+C0-FF;
+}
+@font-face {
+    font-family: 'Kanit';
+    unicode-range: U+0E00–U+0E7F;
+}
+
+h1, h2, h3, h4, h5, h6, p,a , li{
+    font-family:  'Kanit';
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight:200;
+}
+
+p, a, li {
+  font-weight:200;
+}
+
+
+</style>
+
 # NewsReport
 - [NewsReport](#newsreport)
-  - [What can to do?](#what-can-to-do)
-  - [Project Information.](#project-information)
-- [Database.](#database)
-  - [Install `psycopg` for connect to postgres SQL Server.](#install-psycopg-for-connect-to-postgres-sql-server)
-  - [Setting Database connection to postgres SQL Server.](#setting-database-connection-to-postgres-sql-server)
+  - [ทำอะไรได้บ้าง](#ทำอะไรได้บ้าง)
+  - [รายละเอียดโปรเจค](#รายละเอียดโปรเจค)
+- [ระบบฐานข้อมูล](#ระบบฐานข้อมูล)
+  - [ติดตั้ง `psycopg2` สำหรับการเชื่อมต่อไปยัง postgres SQL Server.](#ติดตั้ง-psycopg2-สำหรับการเชื่อมต่อไปยัง-postgres-sql-server)
+  - [การตั้ังค่าการเชื่อมต่อฐานข้อมูลไปยัง postgres SQL Server. `settings.py`](#การตั้ังค่าการเชื่อมต่อฐานข้อมูลไปยัง-postgres-sql-server-settingspy)
+  - [ทำการ Migrate database เพื่อสร้างตารางทั้งหมดให้ฐานข้อมูลใหม่](#ทำการ-migrate-database-เพื่อสร้างตารางทั้งหมดให้ฐานข้อมูลใหม่)
   - [Dump and Load database to JSON file.](#dump-and-load-database-to-json-file)
-    - [install Django Dump Load UTF-8 for windows.](#install-django-dump-load-utf-8-for-windows)
-    - [Add to INSTALL\_APPS. settings.py](#add-to-install_apps-settingspy)
-    - [Dumpdata to JSON command.](#dumpdata-to-json-command)
+    - [ติดตั้ง Django Dump Load UTF-8 สำหรับ windows.](#ติดตั้ง-django-dump-load-utf-8-สำหรับ-windows)
+    - [เพิ่มใน INSTALL\_APPS. settings.py](#เพิ่มใน-install_apps-settingspy)
+    - [คำสั่งสำหรับการ dumpdata และ loaddata](#คำสั่งสำหรับการ-dumpdata-และ-loaddata)
     - [Loaddata to new database command.](#loaddata-to-new-database-command)
   - [Entity Relations Diagram](#entity-relations-diagram)
-- [Webpage](#webpage)
-  - [feeds](#feeds)
-  - [read](#read)
-  - [admin](#admin)
-- [Developments](#developments)
-  - [COPY settings.py](#copy-settingspy)
-  - [COPY manage.py](#copy-managepy)
+- [หน้าเว็บ](#หน้าเว็บ)
+  - [ฟีด](#ฟีด)
+  - [การจัดหมวดหมู่](#การจัดหมวดหมู่)
+  - [อ่าน](#อ่าน)
+  - [แอดมิน](#แอดมิน)
+- [การพัฒนา](#การพัฒนา)
+  - [คัดลอกไฟล์ settings.py](#คัดลอกไฟล์-settingspy)
+  - [คัดลอกไฟล์ manage.py](#คัดลอกไฟล์-managepy)
+  - [เข้าไปแก้ไขไฟล์ `manage_dev.py` เพื่อให้เรียกใช้ ไฟล์ `settings_dev.py`](#เข้าไปแก้ไขไฟล์-manage_devpy-เพื่อให้เรียกใช้-ไฟล์-settings_devpy)
 
-## What can to do?
-- App for reading articles or news.
-- News or article can be added from the admin page.
+
+
+
+## ทำอะไรได้บ้าง
+- อ่านเนื้อหาบทความ
+- ค้าหาเนื้อหาบทความ
+- จัดกลุ่มบทความด้วยหมวดหมู่
+- จัดกลุ่มบลความด้วยผู้เขียนบทความ
+- เขียนบทความในหน้าแอดมิน
+- มีระบบ ผู้ใข้ธรรมดา (ผู้อ่านข่าว), ผู้เขียนข่าว
   
-## Project Information.
+## รายละเอียดโปรเจค
 - Django Framework.
 - Bootstrap 5 Templates.
 - Postgres SQL.
 - [Requirements](./requirements.txt)
 
-# Database.
-## Install `psycopg` for connect to postgres SQL Server.
+# ระบบฐานข้อมูล
+## ติดตั้ง `psycopg2` สำหรับการเชื่อมต่อไปยัง postgres SQL Server.
 ```
 pip install psycopg2
 ```
-## Setting Database connection to postgres SQL Server.
+## การตั้ังค่าการเชื่อมต่อฐานข้อมูลไปยัง postgres SQL Server. `settings.py`
+
 ```python
 DATABASES = {
     "default": {
@@ -47,15 +83,30 @@ DATABASES = {
     }
 }
 ```
+เปลี่ยนจากการเชื่อมต่อฐานข้อมูลแบบ Local เป็นระบบ Server
+
+## ทำการ Migrate database เพื่อสร้างตารางทั้งหมดให้ฐานข้อมูลใหม่
+```
+python manage.py migrate
+```
 
 ## Dump and Load database to JSON file.
-### install Django Dump Load UTF-8 for windows.
+
+เป็นการทำให้ข้อมูลในฐานข้อมูลอยู่ในรูปแบบ JSON เพื่อให้สามารถย้ายฐานข้อมูลได้
+### ติดตั้ง Django Dump Load UTF-8 สำหรับ windows.
+
+- ใช้สำหรับการโอนย้ายจากฐานข้อมูลเดิม ไปยังฐานข้อมูลใหม่
+
+
 ```
 pip install django-dump-load-utf8
 ```
 
+### เพิ่มใน INSTALL_APPS. [settings.py](/news_writer/settings.py)
 
-### Add to INSTALL_APPS. [settings.py](/news_writer/settings.py)
+
+
+
 ```python
 INSTALLED_APPS = [
     '...',
@@ -63,16 +114,20 @@ INSTALLED_APPS = [
     '...',
 ]
 ```
-### Dumpdata to JSON command.
+### คำสั่งสำหรับการ dumpdata และ loaddata
+
 ```
 python manage.py dumpdatautf8 --output data.json
 ```
+*>>> ทำให้ข้อมูลอยู่ในรูปแบบ JSON*
+
+
 ### Loaddata to new database command.
 
 ```
 python manage.py loaddatautf8 data.json
 ```
-
+*>>> นำข้อมูลที่อยู่ในรูปแบบ JSON และ load ไปยังฐานข้อมูลใหม่*
 
 ## Entity Relations Diagram
 ```
@@ -162,30 +217,46 @@ relationship "One to many" between Comment and ReplyComment {
 
 ```
 
-# Webpage
-## feeds
-![image](/screen/feeds.png)
-*A page for displaying all news content information, such as a list of authors, news or articles, divided by content type.*
-## read 
-![image](/screen/reads.png)
-*A page for reading news and articles. and will display other content of the same author or same category*
-## admin
+
+# หน้าเว็บ
+
+## ฟีด
+![image](/screen/feeds1.png)
+![image](/screen/feeds2.png)
+*เป็นหน้าการแนะนำเนื้อหา, ผู้เขียน และหมวดหมู่ทั้งหมด*
+
+
+## การจัดหมวดหมู่
+
+![image](/screen/category.png)
+*ผู้ใช้สามารถเลือกเนื้อหาจากหมวดหมู่ที่ผู้ใช้ต้องการ*
+
+
+
+![image](/screen/author.png)
+*ผู้ใช้สามารถเลือกเนื้อหาจากผู้เขียนที่ผู้ใช้ต้องการ*
+
+## อ่าน 
+![image](/screen/read.png)
+*เป็นหน้าหำหรับการอ่านเนื้อหา และทุกครั้งที่มีคนกดเข้าไปยังเนื้อหาก็จะเพิ่มจำนวนผู้อ่านให้กับเนื้อหานั้นๆ*
+
+## แอดมิน
 ![image](/screen/admin.png)
-*Admin page for writing news or content and can also add authors and categories.*
+*เป็นหน้าสำหรับการเขียนบทความ*
 
-
-# Developments
-## COPY settings.py
+# การพัฒนา
+## คัดลอกไฟล์ settings.py 
 ```
 COPY settings.py settings_dev.py
 ```
-
-## COPY manage.py
+## คัดลอกไฟล์ manage.py
 ```
 COPY manage.py manage_dev.py
 ```
 
-*edit manage_dev.py*
+
+
+## เข้าไปแก้ไขไฟล์ `manage_dev.py` เพื่อให้เรียกใช้ ไฟล์ `settings_dev.py`
 ```python 
 
 def main():
@@ -202,3 +273,5 @@ def main():
     execute_from_command_line(sys.argv)
 
 ```
+
+*เป็นการแยกไฟล์ที่ใช้สำหรับการพัฒนา ออกจากการ Deploy*
