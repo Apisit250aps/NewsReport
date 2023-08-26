@@ -1,4 +1,4 @@
-<style>
+<!-- <style>
 @font-face {
     font-family: 'monospace';
     unicode-range: U+41-5A, U+61-7A, U+C0-FF;
@@ -21,7 +21,7 @@ p, a, li {
 }
 
 
-</style>
+</style> -->
 
 # NewsReport
 - [NewsReport](#newsreport)
