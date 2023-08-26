@@ -24,7 +24,8 @@ urlpatterns = [
     path('', page.index, name='index'),
     path('feeds', page.feeds, name='feeds'),
     path('read/<int:id>', page.read, name='read'),
-    path('filter-author/<int:id>', page.filter_author, name='filter-author')
+    path('filter-author/<int:id>', page.filter_author, name='filter-author'),
+    path('filter-category/<int:id>', page.filter_category, name='filter-category')
 ]
 
 from django.conf import settings

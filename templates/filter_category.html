@@ -1,0 +1,110 @@
+{% extends 'index.html' %}
+{% block content %}
+<main>
+
+
+
+    <header class="site-header d-flex flex-column justify-content-center align-items-center">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-12 col-12 text-center">
+
+                    <h2 class="mb-0">{{category}}</h2>
+                </div>
+                
+
+            </div>
+        </div>
+    </header>
+
+    <section class="latest-podcast-section section-padding" id="section_2">
+        <div class="container">
+            
+            <div class="row row-cols-1 m-auto justify-content-center">
+                
+
+                <div class="col">
+                    <div class="section-title-wrap mb-5">
+                        <h4 class="section-title">More Stories</h4>
+                    </div>
+                </div>
+
+                <div class="col " id="content-filter">
+                    <div class="row row-cols-1 row-cols-2 m-auto">
+                        {% for content in contents %}
+                        <div class="custom-block d-flex">
+                            <div class="">
+                                <div class="custom-block-icon-wrap">
+                                    <div class="section-overlay"></div>
+                                    <a href="" class="custom-block-image-wrap">
+                                        <img src="{{content.poster}}" class="custom-block-image img-fluid"
+                                            alt="">
+    
+                                        
+                                    </a>
+                                </div>
+    
+                                <div class="mt-2">
+                                    <a href="#" class="btn custom-btn">
+                                        Subscribe
+                                    </a>
+                                </div>
+                            </div>
+    
+                            <div class="custom-block-info">
+                                <div class="custom-block-top d-flex mb-1">
+                                    <small class="me-4">
+                                        <i class="bi-clock-fill custom-icon"></i>
+                                        {{content.write}}
+                                        
+                                    </small>
+                                    <a class="" href="">
+                                        <small style="color: #0c9;"><b>{{content.category}}</b></small>
+                                    </a>
+    
+                                    
+                                </div>
+    
+                                <h5 class="mb-2">
+                                    <a href="{% url 'read' content.id %}">
+                                        {{content.title}}
+                                    </a>
+                                </h5>
+    
+                                <div class="profile-block d-flex">
+                                    <img src="{{content.author_profile}}"
+                                        class="profile-block-image img-fluid" alt="">
+    
+                                    <p>
+                                        {{content.author.user}}
+                                        <img src="images/verified.png" class="verified-image img-fluid" alt="">
+                                        <strong>{{content.author.occupation}}</strong>
+                                    </p>
+                                </div>
+    
+                                <p class="mb-0">{{content.author.description}}</p>
+    
+                                <div class="custom-block-bottom d-flex justify-content-between mt-3">
+                                    <a href="#" class="bi-eye me-1">
+                                        <span>{{content.read}}</span>
+                                    </a>
+    
+                                    <a href="#" class="bi-heart me-1">
+                                        <span>{{content.like}}</span>
+                                    </a>
+                                </div>
+                            </div>
+    
+                            
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+{% endblock content %}

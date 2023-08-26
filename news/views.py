@@ -14,6 +14,7 @@ def setContent(content):
         content['occupation'] = item.author.occupation
         content['author_desc'] = item.author.description
         content["author"] = models.Author.objects.get(id=item.author.id)
+        content['author_id'] = models.Author.objects.get(id=item.author.id).id
         content['author_profile'] = f"/media/{models.Author.objects.get(id=item.author.id).profile_img}"
         
         if models.Content.objects.get(id=item.id).poster =="" :
@@ -25,6 +26,7 @@ def setContent(content):
         content["description"] = item.description[:20]
         content["detail"] = item.detail
         content['category'] = item.category
+        content['category_id'] = item.category.id
         content["read"] = item.read
         content["write"] = item.write
         contents.append(content)
@@ -50,6 +52,7 @@ def feeds(req):
     category = models.Category.objects.all()
     for cats in category:
         cat = {}
+        cat['id'] = cats.id
         cat['img'] = cats.img
         cat['category'] = cats.category
         cat['len'] = models.Content.objects.filter(category=models.Category.objects.get(id=cats.id)).count()
@@ -95,11 +98,6 @@ def read(req, id):
     else :  
         context['related'] = random.choices(setContent(related), k=3)
     
-    
-    
-    
-    
-    
     return render(req, 'read.html' ,context)
 
 def filter_author(request, id):
@@ -114,3 +112,14 @@ def filter_author(request, id):
     
     
     return render(request, 'filter_author.html', context)
+
+def filter_category(request, id):
+    context ={}
+    category = models.Category.objects.get(id=id)
+    
+    content = models.Content.objects.filter(category=category)
+    
+    context["contents"] = setContent(content)
+    context["category"] = category
+    
+    return render(request, 'filter_category.html', context)
