@@ -1,4 +1,5 @@
 {% extends 'index.html' %}
+{% load static %}
 {% block content %}
 <main>
 
@@ -12,7 +13,7 @@
 
                     <h2 class="mb-0">Channel</h2>
                 </div>
-                
+
 
             </div>
         </div>
@@ -30,6 +31,9 @@
                         <strong>{{author.occupation}}</strong>
                     </p>
                 </div>
+                {% if auth.verify == 1 %}
+                <img src="{% static 'images/verified.png' %}" class="owl-carousel-verified-image img-fluid" alt="" />
+                {% endif %}
 
                 <ul class="social-icon ms-lg-auto ms-md-auto">
                     <li class="social-icon-item">
@@ -37,9 +41,9 @@
                     </li>
                 </ul>
             </div>
-            
+
             <div class="row row-cols-1 m-auto justify-content-center">
-                
+
 
                 <div class="col">
                     <div class="section-title-wrap mb-5">
@@ -55,75 +59,72 @@
                                 <div class="custom-block-icon-wrap">
                                     <div class="section-overlay"></div>
                                     <a href="" class="custom-block-image-wrap">
-                                        <img src="{{content.poster}}" class="custom-block-image img-fluid"
-                                            alt="">
-    
-                                        
+                                        <img src="{{content.poster}}" class="custom-block-image img-fluid" alt="">
                                     </a>
                                 </div>
-    
+
                                 <div class="mt-2">
                                     <a href="#" class="btn custom-btn">
                                         Subscribe
                                     </a>
                                 </div>
                             </div>
-    
+
                             <div class="custom-block-info">
                                 <div class="custom-block-top d-flex mb-1">
                                     <small class="me-4">
                                         <i class="bi-clock-fill custom-icon"></i>
                                         {{content.write}}
-                                        
+
                                     </small>
-                                    <a class="" href="">
+                                    <a class="" href="{% url 'filter-category' content.category.id %}">
                                         <small style="color: #0c9;"><b>{{content.category}}</b></small>
                                     </a>
-    
-                                    
+
+
                                 </div>
-    
+
                                 <h5 class="mb-2">
                                     <a href="{% url 'read' content.id %}">
                                         {{content.title}}
                                     </a>
                                 </h5>
-    
+
                                 <div class="profile-block d-flex">
-                                    <img src="/media/{{author.profile_img}}"
-                                        class="profile-block-image img-fluid" alt="">
-    
+                                    <img src="/media/{{author.profile_img}}" class="profile-block-image img-fluid"
+                                        alt="">
+
                                     <p>
                                         {{author.user}}
                                         <img src="images/verified.png" class="verified-image img-fluid" alt="">
                                         <strong>{{author.occupation}}</strong>
                                     </p>
                                 </div>
-    
+
                                 <p class="mb-0">{{author.description}}</p>
-    
+
                                 <div class="custom-block-bottom d-flex justify-content-between mt-3">
                                     <a href="#" class="bi-eye me-1">
                                         <span>{{content.read}}</span>
                                     </a>
-    
+
                                     <a href="#" class="bi-heart me-1">
                                         <span>{{content.like}}</span>
                                     </a>
-    
-                                    
-    
-                                    
+
+
+
+
                                 </div>
                             </div>
-    
-                            
+
+
                         </div>
                         {% endfor %}
                     </div>
                 </div>
 
-                
+
 
                 <!-- <div class="col-lg-4 col-12 mx-auto">
                     <nav aria-label="Page navigation example">

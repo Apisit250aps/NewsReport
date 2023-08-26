@@ -68,67 +68,74 @@
                                     <div class="custom-block-icon-wrap">
                                         <div class="section-overlay"></div>
                                         <a href="detail-page.html" class="custom-block-image-wrap">
-                                            <img src="{{ content.poster }}" class="custom-block-image img-fluid" alt="" />
+                                            <img src="{{ content.poster }}" class="custom-block-image img-fluid"
+                                                alt="" />
                                         </a>
                                     </div>
-        
+
                                     <div class="mt-2">
                                         <a href="#" class="btn custom-btn"> Subscribe </a>
                                     </div>
                                 </div>
-        
+
                                 <div class="custom-block-info">
                                     <div class="custom-block-top d-flex mb-1">
                                         <small class="me-4">
                                             <i class="bi-clock-fill custom-icon"></i>
                                             {{content.write}}
-                                            
+
                                         </small>
-                                        <a class="" href="">
+                                        <a class="" href="{% url 'filter-category' content.category.id %}">
                                             <small style="color: #0c9;"><b>{{content.category}}</b></small>
                                         </a>
-        
-                                        
+
+
                                     </div>
-        
-        
+
+
                                     <h5 class="mb-2">
                                         <a href="{% url 'read' content.id %}" id="title"> {{content.title}} </a>
                                     </h5>
-                                    
-        
+
+
                                     <div class="profile-block d-flex">
-                                        <img src="{{ content.author_profile }}" class="profile-block-image img-fluid" alt="" />
-        
-                                        <p>
-                                            {{ content.author }}
-                                            <img src="images/verified.png" class="verified-image img-fluid" alt="" />
-                                            <strong></strong>
-                                        </p>
+                                        <img src="{{ content.author_profile }}" class="profile-block-image img-fluid"
+                                            alt="" />
+
+                                        <div class="d-flex flex-column">
+                                            <a href="{% url 'filter-author' content.author_id %}">
+                                                {{ content.author }}
+                                                <img src="images/verified.png" class="verified-image img-fluid"
+                                                    alt="" />
+                                            </a>
+                                            <strong>{{content.author.occupation}}</strong>
+
+                                        </div>
+                                        
                                     </div>
-        
+
                                     <p class="mb-0">{{content.description}}</p>
-        
+
                                     <div class="custom-block-bottom d-flex justify-content-between mt-3">
                                         <a href="#" class="bi-eye me-1">
                                             <span>{{content.read}}</span>
                                         </a>
-        
+
                                         <a href="#" class="bi-heart me-1">
                                             <span>{{content.like}}</span>
                                         </a>
-        
-        
+
+
                                     </div>
                                 </div>
-        
-                                
+
+
                             </div>
                         </div>
                         {% endfor %}
                     </div>
                 </div>
-                
+
 
 
 
@@ -156,10 +163,10 @@
 
                                 <div class="custom-block-info custom-block-overlay-info">
                                     <h5 class="mb-1">
-                                        
+
                                         <a href="{% url 'filter-category' topic.id %}">{{topic.category}} </a>
                                     </h5>
-                                    
+
                                     <p class="badge mb-0">{{topic.len}} Stories</p>
                                 </div>
                             </div>
@@ -191,7 +198,7 @@
                         </div>
 
                         <div class="custom-block-info">
-                            
+
                             <h5 class="mb-2" id="title">
                                 <a href="{% url 'read' t.id %}"> {{t.title}} </a>
                             </h5>
@@ -199,10 +206,13 @@
                             <div class="profile-block d-flex">
                                 <img src="{{ t.author_profile }}" class="profile-block-image img-fluid" alt="" />
 
-                                <p>
-                                    {{t.author}}
+                                <div class="d-flex flex-column">
+                                    <a href="{% url 'filter-author' t.author_id %}">
+                                        {{t.author}}
+
+                                    </a>
                                     <strong>{{t.occupation}}</strong>
-                                </p>
+                                </div>
                             </div>
 
                             <p class="mb-0">{{t.description}}</p>
@@ -220,7 +230,7 @@
                             </div>
                         </div>
 
-                        
+
                     </div>
                 </div>
                 {% endfor %}

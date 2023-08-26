@@ -86,10 +86,10 @@ WSGI_APPLICATION = 'news_writer.wsgi.application'
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "postgres",
+        "NAME": "news",
         "USER": "postgres",
-        "PASSWORD": "RuqmTIDNbf1TOOM8",
-        "HOST": "db.fobvnwwvjanhbqboizxn.supabase.co",
+        "PASSWORD": "apisit250",
+        "HOST": "localhost",
         "PORT": "5432",
     }
 }
