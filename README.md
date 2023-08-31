@@ -334,3 +334,14 @@ ALLOWED_HOSTS = [".vercel.app", "127.0.0.1"]
 
 ```
 
+## สร้างไฟล์ build_files.sh และตั้งค่า
+
+[`build_files.sh`](/build_files.sh)
+
+```shell
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+
+python3.9 manage.py collectstatic --noinput --clear
+```
+
