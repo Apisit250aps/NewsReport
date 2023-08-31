@@ -70,7 +70,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'news_writer.wsgi.application'
+WSGI_APPLICATION = 'news_writer.wsgi.app'
 
 
 # Database
