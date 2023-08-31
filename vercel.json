@@ -10,10 +10,5 @@
         "src": "/(.*)",
         "dest": "news_writer/wsgi.py"
       }
-    ],
-    "functions": {
-      "bot/**/*": {
-        "maxDuration": 60
-      }
-    }
+    ]
   }
