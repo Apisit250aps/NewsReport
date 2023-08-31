@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-uwv697=-zxz3v6^k2!0caj-%&z5y%@juvbw$v0q*1b^a0q!##h
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [".vercel.app", "127.0.0.1"]
 
 
 # Application definition
@@ -86,10 +86,10 @@ WSGI_APPLICATION = 'news_writer.wsgi.application'
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "news",
+        "NAME": "postgres",
         "USER": "postgres",
-        "PASSWORD": "apisit250",
-        "HOST": "localhost",
+        "PASSWORD": "T4Avmh@rE$f63e-",
+        "HOST": "db.blsbvaeuyafbqetzjqlj.supabase.co",
         "PORT": "5432",
     }
 }

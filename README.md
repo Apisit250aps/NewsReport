@@ -275,3 +275,62 @@ def main():
 ```
 
 *เป็นการแยกไฟล์ที่ใช้สำหรับการพัฒนา ออกจากการ Deploy*
+
+
+# Deployments
+
+## ตั้งค่า wsgi.py
+```python
+...
+...
+
+
+application = get_wsgi_application()
+
+app = application
+
+```
+
+## ตั้งค่า ALLOW_HOST 
+
+```python 
+
+ALLOWED_HOSTS = [".vercel.app", "127.0.0.1"]
+
+```
+
+## สร้างไฟล์ vercel.json และตั้งค่า
+
+[`vercel.json`](/vercel.json)
+
+```json
+{
+    "version": 2,
+    "builds": [
+        {
+            "src": "news_writer/wsgi.py",
+            "use": "@vercel/python"
+        },
+        {
+            "src": "build_files.sh",
+            "use": "@vercel/static-build",
+            "config": {
+                "distDir": "staticfiles_build"
+            }
+        }
+    ],
+    "routes": [
+        {
+            "src": "/static/(.*)",
+            "dest": "/static/$1"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "news_writer/wsgi.py"
+        }
+    ]
+    
+}
+
+```
+
