@@ -71,7 +71,7 @@ https://templatemo.com/tm-584-pod-talk
             <img src="{% static 'images/pod-talk-logo.png' %}" class="logo-image img-fluid"
                 alt="templatemo pod talk" />
         </a>
-
+{% comment %} 
         <form action="#" method="get" class="custom-form search-form flex-fill me-3" role="search">
             <div class="input-group input-group-lg">
                 <input name="search" type="search" class="form-control" id="search" placeholder="Search Podcast"
@@ -81,14 +81,14 @@ https://templatemo.com/tm-584-pod-talk
                     <i class="bi-search"></i>
                 </button>
             </div>
-        </form>
+        </form> {% endcomment %}
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarNav">
+        {% comment %} <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-lg-auto">
                 <li class="nav-item">
                     <a class="nav-link active" href="index.html">Home</a>
@@ -121,7 +121,7 @@ https://templatemo.com/tm-584-pod-talk
             <div class="ms-4">
                 <a href="#section_3" class="btn custom-btn custom-border-btn smoothscroll">Get started</a>
             </div>
-        </div>
+        </div> {% endcomment %}
     </div>
 </nav>
   {% block content %}{% endblock content %}
