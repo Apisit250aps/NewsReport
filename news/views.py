@@ -38,31 +38,31 @@ def index(req):
 
 
 def feeds(req):
-    context = {}
-    # news = models.News.objects.all()
-    context["author"] = models.Author.objects.all()
+    # context = {}
+    # # news = models.News.objects.all()
+    # context["author"] = models.Author.objects.all()
     
-    contents = models.Content.objects.order_by("write")
-    trends = models.Content.objects.order_by("read")[:3]
+    # contents = models.Content.objects.order_by("write")
+    # trends = models.Content.objects.order_by("read")[:3]
 
-    context["topics"] = []
-    context['trends'] = setContent(trends)
-    context["last_content"] = setContent(contents)
+    # context["topics"] = []
+    # context['trends'] = setContent(trends)
+    # context["last_content"] = setContent(contents)
 
-    category = models.Category.objects.all()
-    for cats in category:
-        cat = {}
-        cat['id'] = cats.id
-        cat['img'] = cats.img
-        cat['category'] = cats.category
-        cat['len'] = models.Content.objects.filter(category=models.Category.objects.get(id=cats.id)).count()
+    # category = models.Category.objects.all()
+    # for cats in category:
+    #     cat = {}
+    #     cat['id'] = cats.id
+    #     cat['img'] = cats.img
+    #     cat['category'] = cats.category
+    #     cat['len'] = models.Content.objects.filter(category=models.Category.objects.get(id=cats.id)).count()
         
-        context['topics'].append(cat)
+    #     context['topics'].append(cat)
     
-    context["last_content"].reverse()
-    context["last_content"][:4]
+    # context["last_content"].reverse()
+    # context["last_content"][:4]
     
-    return render(req, 'feeds.html', context)
+    return render(req, 'feeds.html')
 
 
 def read(req, id):
