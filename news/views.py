@@ -48,15 +48,14 @@ def feeds(req):
     context["topics"] = []
     context['trends'] = setContent(trends)
     context["last_content"] = setContent(contents)
-
+    category_model = models.Category
     category = models.Category.objects.all()
     for cats in category:
         cat = {}
         cat['id'] = cats.id
         cat['img'] = cats.img
         cat['category'] = cats.category
-        cat['len'] = models.Content.objects.filter(category=models.Category.objects.get(id=cats.id)).count()
-        
+        cat['len'] = models.Content.objects.filter(category=category_model.objects.get(id=cats.id)).count()
         context['topics'].append(cat)
     
     context["last_content"].reverse()
