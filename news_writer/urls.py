@@ -21,8 +21,8 @@ from news import views as page
 
 urlpatterns = [
     path('admin/', admin.site.urls, name='admin'),
-    path('', page.index, name='index'),
-    path('feeds', page.feeds, name='feeds'),
+    # path('', page.index, name='index'),
+    path('', page.feeds, name='feeds'),
     path('read/<int:id>', page.read, name='read'),
     path('filter-author/<int:id>', page.filter_author, name='filter-author'),
     path('filter-category/<int:id>', page.filter_category, name='filter-category')
