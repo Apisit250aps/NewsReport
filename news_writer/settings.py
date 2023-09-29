@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    
+    'rest_framework',
     'django_dump_load_utf8',
     'news',
 ]
@@ -86,10 +86,10 @@ WSGI_APPLICATION = 'news_writer.wsgi.application'
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "postgres",
+        "NAME": "newsdb",
         "USER": "postgres",
-        "PASSWORD": "T4Avmh@rE$f63e-",
-        "HOST": "db.blsbvaeuyafbqetzjqlj.supabase.co",
+        "PASSWORD": "apisit250",
+        "HOST": "127.0.0.1",
         "PORT": "5432",
     }
 }
